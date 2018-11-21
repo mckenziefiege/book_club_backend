@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
+  def profile
+    render json: { user: UserSerializer.new(current_user) }, status: :accepted
+  end
+
+  def auth_header
+    # { Authorization: 'Bearer <token>' }
+    request.headers['Authorization']
+  end
+
   # GET /users
   def index
     @users = User.all
