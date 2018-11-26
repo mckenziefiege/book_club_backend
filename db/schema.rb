@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_221709) do
     t.string "username"
     t.string "city"
     t.string "state"
-    t.string "password"
+    t.string "password_digest"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

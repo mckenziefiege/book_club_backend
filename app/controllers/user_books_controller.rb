@@ -1,5 +1,6 @@
 class UserBooksController < ApplicationController
   before_action :set_user_book, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
   # GET /user_books
   def index
