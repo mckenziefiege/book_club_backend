@@ -1,5 +1,6 @@
 class UserEventsController < ApplicationController
   before_action :set_user_event, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
 def auth_header
   # { Authorization: 'Bearer <token>' }

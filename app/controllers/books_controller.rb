@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
   # GET /books
   def index
@@ -15,7 +16,7 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
-    @book = Book.new(book_params)
+    @book = Book.find_or_create_by(book_params)
 
     if @book.save
       render json: @book, status: :created, location: @book
