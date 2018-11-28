@@ -16,13 +16,9 @@ class UserBooksController < ApplicationController
 
   # POST /user_books
   def create
-    @user_book = UserBook.new(user_book_params)
+    @user_book = UserBook.find_or_create_by(user_book_params)
 
-    if @user_book.save
-      render json: @user_book, status: :created, location: @user_book
-    else
-      render json: @user_book.errors, status: :unprocessable_entity
-    end
+    render json: @user_book
   end
 
   # PATCH/PUT /user_books/1
@@ -47,6 +43,6 @@ class UserBooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_book_params
-      params.require(:user_book).permit(:user_id, :book_id)
+      params.require(:user_book).permit(:user_id, :book_id, :status)
     end
 end

@@ -21,4 +21,4 @@ gone_girl_review = Review.create(user: mckenzie, book: gone_girl, rating: 4, con
 
 gone_girl_book_club = Event.create(name: "Gone Girl Book Club!", location: "81 Prospect St, Brooklyn, NY 11203", date: "11/26/18", time: "5:00pm", description: "This is the second meet up for Gone Girl. We will be discussing chapter 4-7. We will have various snacks and drinks. Come prepared to discuss :)", host: mckenzie)
 
-mckenzie_gone_girl = UserBook.create(user: mckenzie, book: gone_girl)
+mckenzie_gone_girl = UserBook.create(user: mckenzie, book: gone_girl, status: "read")

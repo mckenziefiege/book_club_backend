@@ -16,13 +16,8 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
-    @book = Book.find_or_create_by(book_params)
-
-    if @book.save
-      render json: @book, status: :created, location: @book
-    else
-      render json: @book.errors, status: :unprocessable_entity
-    end
+     @book = Book.find_or_create_by(book_params)
+     render json: @book
   end
 
   # PATCH/PUT /books/1
