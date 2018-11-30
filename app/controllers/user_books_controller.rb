@@ -32,7 +32,9 @@ class UserBooksController < ApplicationController
 
   # DELETE /user_books/1
   def destroy
+    @user = User.find(@user_book.user_id)
     @user_book.destroy
+    render json: @user
   end
 
   private
