@@ -17,6 +17,7 @@ class BooksController < ApplicationController
   # POST /books
   def create
      @book = Book.find_or_create_by(book_params)
+
      render json: @book
   end
 
@@ -42,6 +43,6 @@ class BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:title, :author, :description, :image)
+      params.require(:book).permit(:title, :author, :description, :image, :favorited)
     end
 end
