@@ -16,13 +16,13 @@ class UserEventsController < ApplicationController
 
   # POST /user_events
   def create
-    @user_event = UserEvent.new(user_event_params)
-
-    if @user_event.save
-      render json: @user_event, status: :created, location: @user_event
-    else
-      render json: @user_event.errors, status: :unprocessable_entity
-    end
+    @user_event = UserEvent.create(user_event_params)
+    # if @user_event.save
+    #   render json: @user_event, status: :created, location: @user_event
+    # else
+    #   render json: @user_event.errors, status: :unprocessable_entity
+    # end
+    render json: @user_event
   end
 
   # PATCH/PUT /user_events/1
@@ -36,7 +36,9 @@ class UserEventsController < ApplicationController
 
   # DELETE /user_events/1
   def destroy
+    @user = User.find_by(id: @user_event.user_id)
     @user_event.destroy
+    render json: @user
   end
 
   private

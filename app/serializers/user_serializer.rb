@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :username, :city, :state, :image, :read, :currently_reading, :want_to_read
+  attributes :id, :first_name, :last_name, :username, :city, :state, :image, :read, :currently_reading, :want_to_read, :events, :event_hostings, :user_events, :books
   has_many :user_books
   has_many :user_events
   has_many :books, through: :user_books
