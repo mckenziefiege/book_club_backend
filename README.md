@@ -7,16 +7,15 @@ Novel Finds is an app designed to keep track of what you're reading and to join 
 This app exists to give book lovers a place to keep track of what they've read or what they want to read. For those that want to join a book club to connect with other book lovers, users can create and join book clubs. 
 
 ## Frontend
-To access application frontend: https://github.com/mckenziefiege/book_club_frontend
 
-## Installation
+Application frontend and instruction for setup: [Novel Finds Frontend](https://github.com/mckenziefiege/book_club_frontend)
 
-Follow these steps to install and start the app:
+Follow these steps to start the app:
 
-``` bundle install ```
+### `bundle install`
 
-### Start the app
+Install gems specified in Gemfile
 
-``` rails server ```
+### `rails server`
 
-You can find your app now by accessing http://localhost:3000 in your browser.
+You can find application by accessing http://localhost:3000 in your browser
