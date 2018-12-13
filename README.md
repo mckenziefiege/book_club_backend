@@ -1,4 +1,4 @@
-# Novel Finds Frontend
+# Novel Finds Backend
 
 Novel Finds is an app designed to keep track of what you're reading and to join book clubs in you're area.
 
