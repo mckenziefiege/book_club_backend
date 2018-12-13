@@ -31,12 +31,16 @@ Application frontend and instruction for setup: [Novel Finds Frontend](https://g
 <img width="1431" alt="screen shot 2018-12-12 at 5 44 48 pm" src="https://user-images.githubusercontent.com/38592156/49903854-776b2600-fe36-11e8-9985-812c5ef08f8b.png">
 
 
-## Steps to start app
+## Steps to use application
 
-### `bundle install`
+```bundle install```
 
 Install gems specified in Gemfile
 
-### `rails server`
+```rails db:migrate```
+
+``` rails db:seed```
+
+```rails server```
 
 You can find application by accessing http://localhost:3000 in your browser
