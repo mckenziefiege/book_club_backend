@@ -10,7 +10,7 @@ This app exists to give book lovers a place to keep track of what they've read o
 
 Application frontend and instruction for setup: [Novel Finds Frontend](https://github.com/mckenziefiege/book_club_frontend)
 
-Follow these steps to start the app:
+## Steps to start app
 
 ### `bundle install`
 
